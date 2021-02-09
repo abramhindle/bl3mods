@@ -17,8 +17,8 @@
 ### Want to see the full changelog?? - 
 ###
 
-Please remember that I,  (EpicNNG) did NOT make ALL of these changes.. If anything, I just tweaked other people's values.
-The correct people to credit are listed below.. Please go and thank them over on Twitter or Discord.
+### Please remember that I,  (EpicNNG) did NOT make ALL of these changes.. If anything, I just tweaked other people's values.
+### The correct people to credit are listed below.. Please go and thank them over on Twitter or Discord.
 
 
 ### Thanks to CodyCode, SsPyR, Apocalyptech, 10 FPS, HackerSmasher, FromDarkHell, Apple1417, Grimm
@@ -141,7 +141,7 @@ SparkLevelPatchEntry,(1,1,0,Eldorado_P),/Game/PatchDLC/Alisma/GameData/Regions/A
 # HEALTH CHANGES
 
 
-Global Value Scaling
+# Global Value Scaling
 SparkPatchEntry,(1,1,0,),/Game/GameData/Balance/HealthAndDamage/Att_UniversalBalanceScaler.Att_UniversalBalanceScaler:BP_ConstantValueResolver_C_0,Value,0,,(BaseValueConstant=1.080)
 
 # Enemies Deal Less Damage Per Level (Credit to Grimm)
@@ -3100,7 +3100,7 @@ SparkEarlyLevelPatchEntry,(1,2,0,MatchAll),/Game/PatchDLC/Mayhem2/Gear/Weapon/Da
 # Buffing Maggie damage
 SparkEarlyLevelPatchEntry,(1,2,0,MatchAll),/Game/Gear/Weapons/_Shared/_Design/GameplayAttributes/_Unique/DataTable_WeaponBalance_Unique_JAK.DataTable_WeaponBalance_Unique_JAK,PS_Maggie,DamageScale_2_4F6EF14648BA8F2AE9217DAFEA60EE53,0,,1.5
 
-Buffing Occulist damage
+# Buffing Occulist damage
 SparkEarlyLevelPatchEntry,(1,2,0,MatchAll),/Game/Gear/Weapons/_Shared/_Design/GameplayAttributes/_Unique/DataTable_WeaponBalance_Unique_TOR.DataTable_WeaponBalance_Unique_TOR,PS_Troy,DamageScale_2_4F6EF14648BA8F2AE9217DAFEA60EE53,0,,3.35
 
 # Buffing Mother Too damage
