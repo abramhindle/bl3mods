@@ -1,0 +1,157 @@
+###
+### Name: Raid Bosses based on Better Loot (1.2.1) and Redux
+### Version: 1.2.1
+### Author: Abram, EpicNNG, Apocalyptech
+### Categories: enemy-drops, loot-system
+###
+### License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+### License URL: https://creativecommons.org/licenses/by-sa/4.0/
+###
+
+# Graveward
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Graveward,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Graveward,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Graveward,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+
+# Graveward
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Unique/ItemPool_GraveandWard_Graveward.ItemPool_GraveandWard_Graveward,BalancedItems,0,,((InventoryBalanceData=/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/Grave/Balance/InvBalD_Artifact_Grave.InvBalD_Artifact_Grave,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/Grave/Balance/InvBalD_Artifact_Grave.InvBalD_Artifact_Grave"',Weight=(BaseValueConstant=0.500000)),(InventoryBalanceData=/Game/Gear/Shields/_Design/_Uniques/Ward/Balance/InvBalD_Shield_Ward.InvBalD_Shield_Ward,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Shields/_Design/_Uniques/Ward/Balance/InvBalD_Shield_Ward.InvBalD_Shield_Ward"',Weight=(BaseValueConstant=0.500000)),(InventoryBalanceData=/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/Earworm/Balance/Balance_DAL_AR_Earworm.Balance_DAL_AR_Earworm,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/Earworm/Balance/Balance_DAL_AR_Earworm.Balance_DAL_AR_Earworm"',Weight=(BaseValueConstant=0.500000)))
+# Was 4 (Make it 12)
+SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Unique/ItemPool_GraveandWard_Graveward.ItemPool_GraveandWard_Graveward,Quantity,0,,(BaseValueConstant=12)
+
+# Increase Graveward Health (165 is low?) (trying 420.0, 420 was kinda tough with amp moze) (666?)
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,666.0
+
+# Increase Graveward Damage (15 was kinda tought) (30?)
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,30.0
+
+# Buffing Eista Invincible Health
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
+
+# Buffing Eista Invincible Damage
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+
+# Eista Chance to Drop
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Eista_Invincible,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Eista_Invincible,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Eista_Invincible,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_EistaChild_Radiation),/Game/PatchDLC/Hibiscus/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Hibiscus.Table_Legendary_SpecificLootOdds_Hibiscus,Eista_Invincible,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_EistaChild_Radiation),/Game/PatchDLC/Hibiscus/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Hibiscus.Table_Legendary_SpecificLootOdds_Hibiscus,Eista_Invincible,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_EistaChild_Radiation),/Game/PatchDLC/Hibiscus/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Hibiscus.Table_Legendary_SpecificLootOdds_Hibiscus,Eista_Invincible,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+
+# Drop 12 items? for Eista
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Hibiscus/GameData/Loot/EnemyPools/ItemPool_Eista.ItemPool_Eista,Quantity,0,,(BaseValueConstant=12)
+
+# Epic's Eista Drops
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Hib_EistaChild_Radiation),/Game/PatchDLC/Hibiscus/GameData/Loot/EnemyPools/ItemPoolList_Eista.ItemPoolList_Eista,ItemPools,0,,((ItemPool=ItemPoolData'"/Game/PatchDLC/Hibiscus/GameData/Loot/Legendary/ItemPool_Hibiscus_Shields_Legendary.ItemPool_Hibiscus_Shields_Legendary"',PoolProbability=(BaseValueConstant=0.025)),(ItemPool=ItemPoolData'"/Game/Enemies/Tink/Loot/_Design/LootPools/ItemPool_LootTink_TinkLootPackOpened.ItemPool_LootTink_TinkLootPackOpened"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/PatchDLC/Alisma/GameData/Loot/Legendary/ItemPool_Alisma_Legendary_Dedicate_Benedict.ItemPool_Alisma_Legendary_Dedicate_Benedict"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/ItemPool_DiamondKeyChest.ItemPool_DiamondKeyChest"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/PatchDLC/Hibiscus/GameData/Loot/Legendary/ItemPool_Hib_SnipeRifles_Legendary.ItemPool_Hib_SnipeRifles_Legendary"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/Guns/ItemPool_Guns_VeryRare.ItemPool_Guns_VeryRare"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/Shields/ItemPool_Shields_04_VeryRare.ItemPool_Shields_04_VeryRare"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/GrenadeMods/ItemPool_GrenadeMods_04_VeryRare.ItemPool_GrenadeMods_04_VeryRare"',PoolProbability=(BaseValueConstant=0.2)),(ItemPool=ItemPoolData'"/Game/PatchDLC/Hibiscus/GameData/Loot/Legendary/ItemPool_Hibiscus_Shields_Legendary.ItemPool_Hibiscus_Shields_Legendary"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_VeryFew.Init_RandomLootCount_VeryFew_C"')),(ItemPool=ItemPoolData'"/Game/Enemies/Tink/Loot/_Design/LootPools/ItemPool_LootTink_TinkLootPackOpened.ItemPool_LootTink_TinkLootPackOpened"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToFour.Init_RandomLootCount_UpToFour_C"')),(ItemPool=ItemPoolData'"/Game/PatchDLC/Alisma/GameData/Loot/Legendary/ItemPool_Alisma_Legendary_Dedicate_Benedict.ItemPool_Alisma_Legendary_Dedicate_Benedict"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToFour.Init_RandomLootCount_UpToFour_C"')),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/ItemPool_DiamondKeyChest.ItemPool_DiamondKeyChest"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToFour.Init_RandomLootCount_UpToFour_C"')),(ItemPool=ItemPoolData'"/Game/PatchDLC/Hibiscus/GameData/Loot/Legendary/ItemPool_Hib_SnipeRifles_Legendary.ItemPool_Hib_SnipeRifles_Legendary"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_SomeMinOne.Init_RandomLootCount_SomeMinOne_C"')),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/Guns/ItemPool_Guns_VeryRare.ItemPool_Guns_VeryRare"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToSix.Init_RandomLootCount_UpToSix_C"')),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/Shields/ItemPool_Shields_04_VeryRare.ItemPool_Shields_04_VeryRare"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToFour.Init_RandomLootCount_UpToFour_C"')),(ItemPool=ItemPoolData'"/Game/GameData/Loot/ItemPools/GrenadeMods/ItemPool_GrenadeMods_04_VeryRare.ItemPool_GrenadeMods_04_VeryRare"',NumberOfTimesToSelectFromThisPool=(AttributeInitializer=BlueprintGeneratedClass'"/Game/GameData/Loot/ItemPools/Init_RandomLootCount_UpToFour.Init_RandomLootCount_UpToFour_C"')))
+
+# EpicNNG's Eista Drop Pattern
+# REPLACE EISTA DROP PATTERN WITH LOOT TINK PATTERN
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Hib_EistaChild_Radiation),/Hibiscus/NonPlayerCharacters/Eista/_Design/Character/BPChar_Hib_EistaChild_Radiation.BPChar_Hib_EistaChild_Radiation_C:AIBalanceState_GEN_VARIABLE,DropLootPattern,0,,LootSpawnPatternData'/Game/Enemies/Tink/Loot/_Design/LootPools/'
+
+
+# Not sure this is doing anything
+# Turn Traitor Eddie into a RAID BOSS
+# Make Freddie/Eddie Drop something
+# Freddie the Traitor from Apocalyptech
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Freddie,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Freddie,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Freddie,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+
+
+# Drop 12 items? for Freddie
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/ItemPool_Freddie.ItemPool_Freddie,Quantity,0,,(BaseValueConstant=12)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/GameData/Loot/EnemyPools/ItemPool_Freddie.ItemPool_Freddie,Quantity,0,,(BaseValueConstant=12)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/GameData/Loot/EnemyPools/ItemPool_Freddie.ItemPool_Freddie,Quantity,0,,(BaseValueConstant=12)
+
+# Freddie Health? was 50, 2000? He's level 2 so maybe try 1 million, trying 100 mill
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,100000000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,100000000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,TraitorEddie,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,100000000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,TraitorEddie,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,100000000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Freddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Freddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000000
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
+#
+# Make Freddie Hit Hard
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Freddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Freddie,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_TraitorEddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,TraitorEddie,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Freddie),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,TraitorEddie,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+
+# Nah freddie just doesn't work
+#
+# moving on to petunia
+
+# /Dandelion/Enemies/Loader/_Unique/VIPOnly/Petunia_FreddieBot/
+# BPChar_VIPOnly_Petunia
+SparkCharacterLoadedEntry,(1,1,0,BPChar_VIPOnly_Petunia),/Dandelion/Enemies/Loader/_Unique/VIPOnly/Petunia_FreddieBot/_Design/Character/BPChar_VIPOnly_Petunia.BPChar_VIPOnly_Petunia_C:AIBalanceState_GEN_VARIABLE,BPlayThroughs.PlayThroughs[1].DropOnDeathItemPools.ItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool.BaseValueConstant,0,,12
+# 16 and 7, try 100 and 50
+# THis one does work 1000 is too much; 500 is enough? 500 was just slow. Trying 250
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,250
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,50
+# was 1.8
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,10
+
+
+SparkCharacterLoadedEntry,(1,1,0,BPChar_VIPOnly_Dandelion),/Dandelion/Enemies/Loader/_Unique/VIPOnly/Dandelion_FreddieBot/_Design/Character/BPChar_VIPOnly_Dandelion.BPChar_VIPOnly_Dandelion_C:AIBalanceState_GEN_VARIABLE,BPlayThroughs.PlayThroughs[1].DropOnDeathItemPools.ItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool.BaseValueConstant,0,,12
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,250
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,50
+# was 1.8
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandelion,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,10
+
+
+# Loco Chantale Drops
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Kill_GoatEater,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Kill_GoatEater,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Kill_GoatEater,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+
+
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Danedelion/GameData/Loot/EnemyPools/ItemPool_Kill_GoatEater.ItemPool_Kill_LocoChantelle,Quantity,0,,(BaseValueConstant=12)
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/ItemPool_LocoChantelle.ItemPool_LocoChantelle,Quantity,0,,(BaseValueConstant=12)
+
+
+# None of this works
+# Loco Chantale HP (100 seemed small)
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,Kill_GoatEater,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+
+
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+
+
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Dandelion/NonPlayerCharacters/_Design/Table_Balance_DandelionNPC.Table_Balance_DandelionNPC,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+
+# Jack bot! ./Apocalyptech/loot_changes/better_loot/better_loot.bl3hotfix
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Jackbot,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Jackbot,LegendaryDropChance_Playthrough2_50_11E6C8E8493E0A73AF9B35891E7CE111,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Game/PatchDLC/Dandelion/GameData/Loot/UniqueEnemyDrops/Table_Legendary_SpecificLootOdds_Dandelion.Table_Legendary_SpecificLootOdds_Dandelion,Jackbot,LegendaryDropChance_Mayhem_49_A4643C45437ECBC97BC6629ECC66F6B6,0,,1
+
+# Jackpot the Jack's Bot - Legendary Pool
+SparkCharacterLoadedEntry,(1,1,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Character/BPChar_JackBot.BPChar_JackBot_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].PoolProbability,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Character/BPChar_JackBot.BPChar_JackBot_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool,0,,(BaseValueConstant=3,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+
+# /Dandelion/Enemies/Looters/Punk/ArmoredVIP/ might Loco?
+# /Dandelion/Enemies/Looters/_Unique/KillChallenges/BPChar_GoonBadass_Coco might be loco
+# 
