@@ -48,18 +48,19 @@ SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Unique/ItemPool_GraveandW
 SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/Unique/ItemPool_GraveandWard_Graveward.ItemPool_GraveandWard_Graveward,Quantity,0,,(BaseValueConstant=12)
 
 # Increase Graveward Health (165 is low?) (trying 420.0, 420 was kinda tough with amp moze) (666?)
-SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,666.0
+# 666 was tough
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,2400
 
 # Increase Graveward Damage (15 was kinda tought) (30?)
-SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,30.0
+SparkCharacterLoadedEntry,(1,2,0,BPChar_EdenBoss),/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1.Table_Balance_EdenBoss_PT1,EdenBoss,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,40.0
 
 # Buffing Eista Invincible Health
-SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,50
-SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,50
-SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,150
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,150
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,150
 
 # Buffing Eista Invincible Damage
-SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Hibiscus/NonPlayerCharacters/_Design/Table_Balance_HibiscusNPC.Table_Balance_HibiscusNPC,Eista_Invincible,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,40
 
 # Eista Chance to Drop
 # SparkCharacterLoadedEntry,(1,2,0,BPChar_Hib_Eista),/Game/GameData/Loot/ItemPools/Table_LegendarySpecificLootOdds.Table_LegendarySpecificLootOdds,Eista_Invincible,LegendaryDropChance_Playthrough1_48_4189D9DA42C2B912FC25209E8C353A26,0,,1
@@ -103,23 +104,23 @@ SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/GameData/Loot/EnemyPools/ItemP
 SparkCharacterLoadedEntry,(1,1,0,BPChar_VIPOnly_Petunia),/Dandelion/Enemies/Loader/_Unique/VIPOnly/Petunia_FreddieBot/_Design/Character/BPChar_VIPOnly_Petunia.BPChar_VIPOnly_Petunia_C:AIBalanceState_GEN_VARIABLE,BPlayThroughs.PlayThroughs[1].DropOnDeathItemPools.ItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool.BaseValueConstant,0,,12
 # 16 and 7, try 100 and 50
 # THis one does work 1000 is too much; 500 is enough? 500 was just slow. Trying 250
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,250
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,50
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,50
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,50
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,50
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,666
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,150
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,150
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,150
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,150
 # was 1.8
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,10
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Petunia),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Petunia,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,85
 
 
 SparkCharacterLoadedEntry,(1,1,0,BPChar_VIPOnly_Dandelion),/Dandelion/Enemies/Loader/_Unique/VIPOnly/Dandelion_FreddieBot/_Design/Character/BPChar_VIPOnly_Dandelion.BPChar_VIPOnly_Dandelion_C:AIBalanceState_GEN_VARIABLE,BPlayThroughs.PlayThroughs[1].DropOnDeathItemPools.ItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool.BaseValueConstant,0,,12
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,250
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,666
 SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,250
 SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,250
 SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,250
 SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,250
 # was 1.8
-SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,10
+SparkCharacterLoadedEntry,(1,2,0,BPChar_VIPOnly_Dandelion),/Game/PatchDLC/Dandelion/Enemies/Loader/_Shared/_Design/Balance/Table_Balance_Loader_Uniques.Table_Balance_Loader_Uniques,Dandellion,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,100
 
 
 ############### LOCO CHANTALE ################
@@ -151,37 +152,37 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_GoonBadass_Coco),/Dandelion/Enemies/Loot
 # doesn't work
 # With LocoChantelle
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
 # With Kill_GoatEater
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looters/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
 # Just with Looter instead of Looters
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,LocoChantelle,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/_Design/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GoonBadass_Coco),/Game/PatchDLC/Dandelion/Enemies/Looter/_Shared/Balance/Table_Balance_Looter_Uniques.Table_Balance_Looter_Uniques,Kill_GoatEater,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
 
 ############### Jack Bot ################
@@ -202,25 +203,25 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Sha
 
 # An attempt at jackbot health!
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,10000
 SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT1.Table_Balance_JackBot_PT1,Jackbot,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,10000
 SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Balance_JackBot_PT2.Table_Balance_JackBot_PT2,Jackbot,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,1000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,1000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_03_Tertiary_16_46D12ED24F464AF5278FAAA2927388E2,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_04_Quaternary_18_1B102342416A40A8DC163EA34FE48863,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,HealthMultiplier_05_Quinary_20_EC017977469D43823CC907990EEF7113,0,,10000
 SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Shared/_Design/Balance/Table_Damage_JackBot.Table_Damage_JackBot,Jackbot,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,18.5
 
 
@@ -236,12 +237,12 @@ SparkCharacterLoadedEntry,(1,2,0,BPChar_JackBot),/Dandelion/Enemies/JackBot/_Sha
 # Tom and Xam (10 is decreasing) (Try 30?)
 # This is Xam
 # Tom is tough at 300 but doable 600 is the start of sponge 1000 is a bit much
-SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_BigBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneBig,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,750
-SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_BigBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneBig,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,750
+SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_BigBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneBig,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,900
+SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_BigBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneBig,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,900
 
 # Xam 1000 is not tough for Xam (4k too easy) (8k start to sponge)
-SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_ToughBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneTougho,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,12000
-SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_ToughBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneTough,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,12000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_ToughBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneTougho,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,14000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_ToughBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneTough,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,14000
 
 # Tom and Xam Damage (18.5??) (200? Don't get hit) (300?)
 SparkCharacterLoadedEntry,(1,2,0,BPChar_LostTwo_BigBro),/Hibiscus/Enemies/_Shared/_Design/Balance/Table_Balance_Cultists.Table_Balance_Cultists,Boss_LostOneBig,DamageMultiplier_LevelBased_23_3CAF34804D650A98AB8FAFAB37CB87FF,0,,300
@@ -258,4 +259,56 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_LostTwo_ToughBro),/Hibiscus/Enemies/Lost
 # This feels like eridium from Xam and Tom
 SparkCharacterLoadedEntry,(1,1,0,BPChar_LostTwo_BigBro),/Game/PatchDLC/Hibiscus/GameData/Loot/EnemyPools/ItemPoolList_Boss_Hibiscus.ItemPoolList_Boss_Hibiscus,ItemPools.ItemPools[7].NumberOfTimesToSelectFromThisPool.BaseValueScale,0,,12
 SparkCharacterLoadedEntry,(1,1,0,BPChar_LostTwo_ToughBro),/Game/PatchDLC/Hibiscus/GameData/Loot/EnemyPools/ItemPoolList_Boss_Hibiscus.ItemPoolList_Boss_Hibiscus,ItemPools.ItemPools[7].NumberOfTimesToSelectFromThisPool.BaseValueScale,0,,12
+
+###### Minosaur ########
+
+# ATTEMPT AT MINOSAUR HEALTH
+
+# # DNW
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,GerSaurianSaurtaur,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,750
+# SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,GerSaurianSaurtaur,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,750
+
+## # Trying basic? instead of GerSaurianSaurtaur
+## SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance.Table_GerSaurian_Balance,Basic,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,5000
+## SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance.Table_GerSaurian_Balance,Basic,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,5000
+## 
+
+# Failure to change health
+
+# Trying basic? instead of GerSaurianSaurtaur
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Basic,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,1
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Basic,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,1
+
+# Trying Saurtaur? instead of GerSaurianSaurtaur
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Saurtaur,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Saurtaur,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+
+
+
+# From ./Apocalyptech/loot_changes/better_loot/better_loot.bl3hotfix
+# This works
+SparkCharacterLoadedEntry,(1,1,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Unique/Saurtaur/_Design/Character/BPChar_GerSaurianSaurtaur.BPChar_GerSaurianSaurtaur_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].PoolProbability,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_GerSaurianSaurtaur),/Geranium/Enemies/GerSaurian/_Unique/Saurtaur/_Design/Character/BPChar_GerSaurianSaurtaur.BPChar_GerSaurianSaurtaur_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool,0,,(BaseValueConstant=7,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+
+
+###### Quartermaster ########
+
+###### Jerrick Logan ########
+
+# instead of GerPsychoPhaserPete?
+# none of this works
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,PhaserPeter,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,PhaserPete,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,GerPsychoPhaserPeter,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,GerPsychoPhaserPete,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Basic,HealthMultiplier_01_Primary_9_07801BE24749AFC87299AD91E1B82E12,0,,10000
+SparkCharacterLoadedEntry,(1,2,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerSaurian/_Shared/_Design/Balance/Table_GerSaurian_Balance_Unique.Table_GerSaurian_Balance_Unique,Basic,HealthMultiplier_02_Secondary_12_9204082C4992E4200D005C8CBA622E49,0,,10000
+
+# Logan loot
+SparkCharacterLoadedEntry,(1,1,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerPsycho_Male/_Unique/PhaserPete/_Design/Character/BPChar_GerPsychoPhaserPete.BPChar_GerPsychoPhaserPete_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].PoolProbability,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_GerPsychoPhaserPete),/Geranium/Enemies/GerPsycho_Male/_Unique/PhaserPete/_Design/Character/BPChar_GerPsychoPhaserPete.BPChar_GerPsychoPhaserPete_C:AIBalanceState_GEN_VARIABLE,DropOnDeathItemPools.ItemPools[0].NumberOfTimesToSelectFromThisPool,0,,(BaseValueConstant=7,DataTableValue=(DataTable=None,RowName="",ValueName=""),BaseValueAttribute=None,AttributeInitializer=None,BaseValueScale=1)
+
+###### Caber Dowd ###########
+
+###### Dickon Goyle #########
 
