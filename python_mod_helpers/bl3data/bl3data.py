@@ -24,7 +24,7 @@ import re
 import json
 import glob
 import appdirs
-import MySQLdb
+# import MySQLdb
 import subprocess
 import configparser
 
