@@ -1071,11 +1071,11 @@ if args.json is None:
     default_mod(end_boss=True)
     # nothing:    
     # added for debug
-    # limit_wave_to_n(missions[111],9)
+    limit_wave_to_n(missions[111],1)
     # limit_wave_to_n(missions[112],6)
     # limit_wave_to_n(missions[121],3)
     # limit_wave_to_n(missions[122],9)
-    limit_wave_to_n(missions[123],1)
+    # limit_wave_to_n(missions[123],1) # this seems to be the drop ship phase
     # limit_wave_to_n(missions[131],6)
     # limit_wave_to_n(missions[132],3)
 else:
