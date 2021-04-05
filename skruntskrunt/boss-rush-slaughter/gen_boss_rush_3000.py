@@ -285,8 +285,9 @@ def round1(end_boss=False):
     endspawns = ["Factory_SpawnFactory_OakAI" for i in range(5)]
 
     if end_boss:
-        gen_endboss(wave=pentulimatewavename,spawners=penspawns,wavecode=131)
-        gen_endboss(wave=endwavename,spawners=endspawns,wavecode=132)
+        # was 132 for code
+        gen_endboss(wave=pentulimatewavename,spawners=penspawns,wavecode=121)
+        gen_endboss(wave=endwavename,spawners=endspawns,wavecode=121)
     else:
         # wave 3a
         gen_mod(pentulimatewavename,
@@ -814,7 +815,8 @@ missions = { # stolen from altef-4 gen_3000_Char_list.py
         562: "OakMissionSpawner_Round5Wave_13"
 }
 
-final_round_spawns = set([missions[x] for x in [442,242,132,341]])
+# was 132
+final_round_spawns = set([missions[x] for x in [442,242,122,341]])
 safe_missions = sorted(set(missions.values()).difference(final_round_spawns))
 def gen_safe_spawns():
     mod.comment("Now we're going to remove the balconey as a spawn point")
@@ -1071,9 +1073,9 @@ if args.json is None:
     default_mod(end_boss=True)
     # nothing:    
     # added for debug
-    limit_wave_to_n(missions[111],1)
+    # limit_wave_to_n(missions[111],1) # only 1 the first wave
     # limit_wave_to_n(missions[112],6)
-    # limit_wave_to_n(missions[121],3)
+    limit_wave_to_n(missions[121],1)
     # limit_wave_to_n(missions[122],9)
     # limit_wave_to_n(missions[123],1) # this seems to be the drop ship phase
     # limit_wave_to_n(missions[131],6)
