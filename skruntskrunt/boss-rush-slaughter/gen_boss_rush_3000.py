@@ -965,9 +965,9 @@ good_endbosses = [
     #  "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
     #  "Behemoth_Raid",
     #  {"spawn":close_spawn}),
-    ("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
-     "Oversphere_Katagawa",
-     {"spawn":close_spawn}),
+    #("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
+    # "Oversphere_Katagawa",
+    # {"spawn":close_spawn}),
 ]
 
 def limit_wave_to_n(wave,n):
