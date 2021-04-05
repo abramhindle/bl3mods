@@ -192,7 +192,7 @@ def gen_mod(so, scale, my_list):
                 f'(X={scale * float(extend[0])},Y={scale * float(extend[1])},Z={scale * float(extend[2])})')
             mod.reg_hotfix(Mod.LEVEL, 'TechSlaughter_P', Mod.get_full(so),
                 'Options.Options[{}].Factory.Object..SpawnOrigin'.format(rev(c,idx)),
-                f'(X={1500},Y={0},Z={0})')
+                f'(X={0},Y={0},Z={0})')# what if we change to X to 0 from 1500
             mod.reg_hotfix(Mod.LEVEL, 'TechSlaughter_P', Mod.get_full(so),
                 'Options.Options[{}].Factory.Object..CollisionHandling'.format(rev(c,idx)),
                 'AlwaysSpawn')
