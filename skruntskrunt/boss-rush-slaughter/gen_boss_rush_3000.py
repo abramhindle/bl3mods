@@ -276,10 +276,14 @@ def round1(end_boss=False):
     pentulimatewavename='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave3a'
     pentulimatespawner="SpawnFactory_OakAI_0"
     penspawns = [f"SpawnFactory_OakAI_{i}" for i in range(5)]
+    # what if we replace spawns?
+    penspawns = ["Factory_SpawnFactory_OakAI" for i in range(5)]
     #wave 3b
     endwavename = '/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave3b'
     endspawner = "SpawnFactory_OakAI_0"
     endspawns = [f"SpawnFactory_OakAI_{i}" for i in range(6)]
+    endspawns = ["Factory_SpawnFactory_OakAI" for i in range(5)]
+
     if end_boss:
         gen_endboss(wave=pentulimatewavename,spawners=penspawns,wavecode=131)
         gen_endboss(wave=endwavename,spawners=endspawns,wavecode=132)
@@ -924,7 +928,7 @@ boss_spawns = {
     },
     close_spawn: {
         "name":balconey_spawns[3],
-        # changed to 1000.0 for Y
+        # changed to 1000.0 for Y 1000.0 for Z
         "location":(4000.0,1000.0,1000.0),
         "myname":close_spawn,
     }
@@ -1050,7 +1054,8 @@ def gen_endboss(boss=None,wave=None,wavecode=None,spawners=["Factory_SpawnFactor
     mod.comment(f"gen_mod({wave},{size},{[ (my_boss[BPCHAR], sspawn) for sspawn in spawners ]})")
     gen_mod(wave,size,[ (my_boss[BPCHAR], sspawn) for sspawn in spawners ])
     # limit wave spawn to only 1
-    limit_wave_to_n(short_wave,1)
+    # disabled temporarily
+    ## limit_wave_to_n(short_wave,1)
     # buff our boss
     #if buff is not None:
     buff(my_boss)
@@ -1064,6 +1069,15 @@ gen_safe_spawns()
 # generate the mobs
 if args.json is None:
     default_mod(end_boss=True)
+    # nothing:    
+    # added for debug
+    # limit_wave_to_n(missions[111],9)
+    # limit_wave_to_n(missions[112],6)
+    # limit_wave_to_n(missions[121],3)
+    # limit_wave_to_n(missions[122],9)
+    limit_wave_to_n(missions[123],1)
+    # limit_wave_to_n(missions[131],6)
+    # limit_wave_to_n(missions[132],3)
 else:
     data =json.load(open(args.json))
     mod.comment(f"Based on {args.json}")
