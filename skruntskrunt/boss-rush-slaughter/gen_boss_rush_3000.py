@@ -377,22 +377,25 @@ def round2(end_boss=False):
             ("BPChar_TrooperBadass_C","SpawnFactory_OakAI_8"),
         ]))
     #wave 4a
-    gen_mod('/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round2/SpawnOptions_TechSlaughter_Round2Wave4a',
-        size,replace_enemy([
-            ("BPChar_TrooperMeleeDark_C","SpawnFactory_OakAI_1"),
-            ("BPChar_HeavyGunner_C","SpawnFactory_OakAI_10"),
-            ("BPChar_Heavy_Badass_C","SpawnFactory_OakAI_11"),
-            ("BPChar_TrooperMedicDark_C","SpawnFactory_OakAI_5"),
-            ("BPChar_Heavy_Acidrain_C","SpawnFactory_OakAI_7"),
-            ("BPChar_Heavy_Basic_C","SpawnFactory_OakAI_9"),
-        ]))
     #wave 4b
-
+    penendwavename = '/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round2/SpawnOptions_TechSlaughter_Round2Wave4a'
     endwavename='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round2/SpawnOptions_TechSlaughter_Round2Wave4b'
     endspawner = "SpawnFactory_OakAI_0"
+    endspawns = ["Factory_SpawnFactory_OakAI" for i in range(7)]
     if end_boss:
-        gen_endboss(wave=endwavename,spawner=endspawner,wavecode=242)
+        gen_endboss(wave=penendwavename,spawners=endspawns,wavecode=242)
+        gen_endboss(wave=endwavename,spawners=endspawns,wavecode=242)
     else:
+    #wave 4a
+        gen_mod(penendwavename,
+                size,replace_enemy([
+                    ("BPChar_TrooperMeleeDark_C","SpawnFactory_OakAI_1"),
+                    ("BPChar_HeavyGunner_C","SpawnFactory_OakAI_10"),
+                    ("BPChar_Heavy_Badass_C","SpawnFactory_OakAI_11"),
+                    ("BPChar_TrooperMedicDark_C","SpawnFactory_OakAI_5"),
+                    ("BPChar_Heavy_Acidrain_C","SpawnFactory_OakAI_7"),
+                    ("BPChar_Heavy_Basic_C","SpawnFactory_OakAI_9"),
+                ]))
         gen_mod(endwavename,
             size,replace_enemy([
                 ("BPChar_TrooperBadass_C",endspawner),
@@ -463,16 +466,21 @@ def round3(end_boss=False):
             ("BPChar_NogNogromancer_C","SpawnFactory_OakAI_29"),
         ]))
     #wave 4a
-    gen_mod('/Game/Enemies/_Spawning/Maliwan/Overspheres/Variants/SpawnOptions_Oversphere_RandomElement',
-        size,replace_enemy([
-            ("BPChar_Oversphere_C","Factory_SpawnFactory_OakAI"),
-        ]))
-    #wave 4a
+    penendwavename='/Game/Enemies/_Spawning/Maliwan/Overspheres/Variants/SpawnOptions_Oversphere_RandomElement'
+    #wave 4b
     endwavename='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round3/SpawnOptions_TechSlaughter_Round3Wave4a'
     endspawner='Factory_SpawnFactory_OakAI'
+    endspawners=[endspawner for i in range(8)]
     if end_boss:
-        gen_endboss(wave=endwavename,spawner=endspawner,wavecode=341)
+        # 4a
+        gen_endboss(wave=penendwavename,spawners=endspawners,wavecode=341)
+        # 4b
+        gen_endboss(wave=endwavename,spawners=endspawners,wavecode=341)
     else:
+        gen_mod(penendwavename,
+                size,replace_enemy([
+                    ("BPChar_Oversphere_C","Factory_SpawnFactory_OakAI"),
+                ]))
         gen_mod(endwavename,
             size,replace_enemy([
                 ("BPChar_Oversphere_C",endspawner),
@@ -546,23 +554,26 @@ def round4(end_boss=False):
             ("BPChar_TrooperShotgunDark_C","SpawnFactory_OakAI_9"),
         ]))
     #wave 4a
-    gen_mod('/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round4/SpawnOptions_TechSlaughter_Round4Wave4a',
-        size,replace_enemy([
-            ("BPChar_Oversphere_C","Factory_SpawnFactory_OakAI"),
-            ("BPChar_Frontrunner_Badass_C_FIX","SpawnFactory_OakAI_0"),
-            ("BPChar_FrontrunnerJammer_C_FIX","SpawnFactory_OakAI_1"),
-            ("BPChar_OversphereDark_C","SpawnFactory_OakAI_11"),
-            ("BPChar_TrooperMedicDark_C_FIX","SpawnFactory_OakAI_15"),
-            ("BPChar_TrooperBasicDark_C_FIX","SpawnFactory_OakAI_16"),
-            ("BPChar_OversphereStinger_C","SpawnFactory_OakAI_17"),
-            ("BPChar_FrontrunnerStriker_C_FIX","SpawnFactory_OakAI_20"),
-        ]))
     #wave 4b
+    penendwavename='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round4/SpawnOptions_TechSlaughter_Round4Wave4a'
     endwavename='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round4/SpawnOptions_TechSlaughter_Round4Wave4b'
     endspawner="Factory_SpawnFactory_OakAI"
+    endspawners=[endspawner for i in range(8)]
     if end_boss:
-        gen_endboss(wave=endwavename,spawner=endspawner,wavecode=442)
+        gen_endboss(wave=penendwavename,spawners=endspawners,wavecode=442)
+        gen_endboss(wave=endwavename,   spawners=endspawners,wavecode=442)
     else:
+        gen_mod(penendwavename,
+                size,replace_enemy([
+                    ("BPChar_Oversphere_C","Factory_SpawnFactory_OakAI"),
+                    ("BPChar_Frontrunner_Badass_C_FIX","SpawnFactory_OakAI_0"),
+                    ("BPChar_FrontrunnerJammer_C_FIX","SpawnFactory_OakAI_1"),
+                    ("BPChar_OversphereDark_C","SpawnFactory_OakAI_11"),
+                    ("BPChar_TrooperMedicDark_C_FIX","SpawnFactory_OakAI_15"),
+                    ("BPChar_TrooperBasicDark_C_FIX","SpawnFactory_OakAI_16"),
+                    ("BPChar_OversphereStinger_C","SpawnFactory_OakAI_17"),
+                    ("BPChar_FrontrunnerStriker_C_FIX","SpawnFactory_OakAI_20"),
+                ]))
         gen_mod(endwavename,
             size,replace_enemy([
                 ("BPChar_Oversphere_C",endspawner),
@@ -874,7 +885,7 @@ def default_mod(end_boss=False):
     round1(end_boss=end_boss)
     # [ ] round2?
     # just override for now XXX
-    end_boss = False
+    # end_boss = False
     round2(end_boss=end_boss)
     # # [ ] round3?
     round3(end_boss=end_boss)
@@ -931,7 +942,8 @@ boss_spawns = {
     close_spawn: {
         "name":balconey_spawns[3],
         # changed to 1000.0 for Y 1000.0 for Z
-        "location":(4000.0,1000.0,1000.0),
+        # changed X to 3500 0 for Y 1000 for Z
+        "location":(3500.0,0.0,1000.0),
         "myname":close_spawn,
     }
 }
@@ -1057,7 +1069,7 @@ def gen_endboss(boss=None,wave=None,wavecode=None,spawners=["Factory_SpawnFactor
     gen_mod(wave,size,[ (my_boss[BPCHAR], sspawn) for sspawn in spawners ])
     # limit wave spawn to only 1
     # disabled temporarily
-    ## limit_wave_to_n(short_wave,1)
+    limit_wave_to_n(short_wave,1)
     # buff our boss
     #if buff is not None:
     buff(my_boss)
@@ -1075,7 +1087,7 @@ if args.json is None:
     # added for debug
     # limit_wave_to_n(missions[111],1) # only 1 the first wave
     # limit_wave_to_n(missions[112],6)
-    limit_wave_to_n(missions[121],1)
+    # limit_wave_to_n(missions[121],1)
     # limit_wave_to_n(missions[122],9)
     # limit_wave_to_n(missions[123],1) # this seems to be the drop ship phase
     # limit_wave_to_n(missions[131],6)
