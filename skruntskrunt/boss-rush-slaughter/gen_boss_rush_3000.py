@@ -940,7 +940,7 @@ og_red_spawn = "og_red"
 boss_spawns = {
     far_spawn:{
         "name":balconey_spawns[0],
-        "location":(0.0,0.0,1000.0),
+        "location":(-2000.0,1000.0,1000.0),
         "myname":far_spawn,
     },
     close_spawn: {
@@ -979,14 +979,15 @@ omega = ("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Ch
          {"spawn":close_spawn})
 graveward =("Graveward","/Game/Enemies/EdenBoss/_Shared/_Design/Character/BPChar_EdenBoss",
              "/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1","EdenBoss",
-            {"spawn":red_spawn}) # og_red_spawn in the right direction too far away # red_spawn right direction, too close
+            {"spawn":far_spawn}) # og_red_spawn in the right direction too far away # red_spawn right direction, too close
+fabrikator = ("Fabrikator","/Game/PatchDLC/Dandelion/Enemies/Fabrikator/Basic/_Design/Character/BPChar_FabrikatorBasic",
+              "/Game/PatchDLC/Dandelion/Enemies/Fabrikator/_Shared/_Design/Balance/Table_Balance_Fabrikator",
+              "FabrikatorPT2",
+              {"spawn":close_spawn})
 
 good_endbosses = [
-    #("Fabrikator","/Game/PatchDLC/Dandelion/Enemies/Fabrikator/Basic/_Design/Character/BPChar_FabrikatorBasic",
-    # "/Game/PatchDLC/Dandelion/Enemies/Fabrikator/_Shared/_Design/Balance/Table_Balance_Fabrikator",
-    # "FabrikatorPT2",
-    # {"spawn":close_spawn}),
-    graveward,
+    fabrikator,
+    # graveward,
     omega,
     wotan,
     katagawa,
@@ -1040,10 +1041,12 @@ def generate_spawn( spawn_entry ):
     path =  spawnpoint.split("'")[1]
     mod.comment(f"generate_spawn: {spawn_entry.get('myname','')} {spawnpoint} moved to ({x},{y},{z})")
     for (obj,val) in [("RelativeLocation",f'(X={x},Y={y},Z={z})'),
-                    ('bFilterByTag','None'),
-                    ('SpawnAction','None'),
-                    ('FilterMatchType','None'),
-                    ('Tags','None')
+                      ('bFilterByTag','None'),
+                      ('SpawnAction','None'),
+                      ('FilterMatchType','None'),
+                      ('Tags','None'),
+                      # # not sure we can rotate the spawn point
+                      # ('StretchyPoint',"(Rotation=(W=0.999,X=0,Y=0.0,Z=0.001))"),
     ]:
         mod.reg_hotfix(
             Mod.EARLYLEVEL, 'TechSlaughter_P',
