@@ -940,7 +940,7 @@ og_red_spawn = "og_red"
 boss_spawns = {
     far_spawn:{
         "name":balconey_spawns[0],
-        "location":(0.0,0.0,2000.0),
+        "location":(0.0,0.0,1000.0),
         "myname":far_spawn,
     },
     close_spawn: {
@@ -968,7 +968,7 @@ OPTIONS=4
 BPCHAR=1
 katagawa = ("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
             "Oversphere_Katagawa",
-            {"spawn":close_spawn}) #red spawn works
+            {"spawn":red_spawn}) #red spawn works # close does not
 wotan = ("Wotan","/Game/PatchDLC/Raid1/Enemies/Behemoth/_Unique/RaidMiniBoss/_Design/Character/BPChar_BehemothRaid",
          "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
          "Behemoth_Raid",
@@ -977,15 +977,16 @@ omega = ("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Ch
          "/Game/Enemies/Nekrobug/_Shared/_Design/Balance/Table_Balance_Nekrobug_Unique",
          "Nekrobug_BetterTimes",
          {"spawn":close_spawn})
+graveward =("Graveward","/Game/Enemies/EdenBoss/_Shared/_Design/Character/BPChar_EdenBoss",
+             "/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1","EdenBoss",
+            {"spawn":red_spawn}) # og_red_spawn in the right direction too far away # red_spawn right direction, too close
 
 good_endbosses = [
-    #("Graveward","/Game/Enemies/EdenBoss/_Shared/_Design/Character/BPChar_EdenBoss",
-    # "/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1","EdenBoss",
-    # {"spawn":far_spawn}),
     #("Fabrikator","/Game/PatchDLC/Dandelion/Enemies/Fabrikator/Basic/_Design/Character/BPChar_FabrikatorBasic",
     # "/Game/PatchDLC/Dandelion/Enemies/Fabrikator/_Shared/_Design/Balance/Table_Balance_Fabrikator",
     # "FabrikatorPT2",
     # {"spawn":close_spawn}),
+    graveward,
     omega,
     wotan,
     katagawa,
@@ -1127,16 +1128,14 @@ def gen_endboss(boss=None,wave=None,wavecode=None,spawners=["Factory_SpawnFactor
 # generate safe spawns (remove balconies)    
 gen_safe_spawns()
 
-def force_wotan_drop():
-    # trying to spawn katagawa in round 1
-    b = katagawa
+def force_boss_drop(b=graveward):
     gen_endboss(boss=b,wave='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave1a_Trooper1',wavecode=111,spawners=["Factory_SpawnFactory_OakAI" for i in range (6)])
     gen_endboss(boss=b,wave='/Game/Enemies/_Spawning/Maliwan/_Mixes/Zone_1/SpawnOptions_KatagawaBallAdds_MeleeMix',wavecode=111,spawners=["Factory_SpawnFactory_OakAI" for i in range (6)])
 
 # generate the mobs
 if args.json is None:
     default_mod(end_boss=True)
-    force_wotan_drop()
+    force_boss_drop()
     # nothing:    
     # added for debug
     # limit_wave_to_n(missions[111],1) # only 1 the first wave
