@@ -936,6 +936,7 @@ def toughen_up_mobs(toughen_mobs, chosen_mobs=chosen_mobs):
 far_spawn = "far"
 close_spawn = "close"
 red_spawn = "red"
+og_red_spawn = "og_red"
 boss_spawns = {
     far_spawn:{
         "name":balconey_spawns[0],
@@ -956,12 +957,18 @@ boss_spawns = {
         "location":(3500.0,0.0,1000.0),
         "myname":red_spawn,
     },
+    og_red_spawn: {
+        "name":boss_spawns[0],
+        # OakSpawnPoint_4 is at -175, 7028, -901
+        "location":(-175,7028,-901),
+        "myname":og_red_spawn,
+    },
 }
 OPTIONS=4
 BPCHAR=1
 katagawa = ("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
             "Oversphere_Katagawa",
-            {"spawn":red_spawn})
+            {"spawn":close_spawn}) #red spawn works
 wotan = ("Wotan","/Game/PatchDLC/Raid1/Enemies/Behemoth/_Unique/RaidMiniBoss/_Design/Character/BPChar_BehemothRaid",
          "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
          "Behemoth_Raid",
