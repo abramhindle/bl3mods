@@ -719,6 +719,8 @@ def round5():
     #     ])
 
 # remove balconies
+# OakSpawnPoint_12 is at -3796,3129,1496 (balconie)
+# OakSpawnPoint_4 is at -175, 7028, -901
 
 Tech_mission = '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Mission.TechSlaughter_Mission:PersistentLevel'
 DC = 'SpawnMesh_DoorCargo'
@@ -933,6 +935,7 @@ def toughen_up_mobs(toughen_mobs, chosen_mobs=chosen_mobs):
 
 far_spawn = "far"
 close_spawn = "close"
+red_spawn = "red"
 boss_spawns = {
     far_spawn:{
         "name":balconey_spawns[0],
@@ -945,34 +948,38 @@ boss_spawns = {
         # changed X to 3500 0 for Y 1000 for Z
         "location":(3500.0,0.0,1000.0),
         "myname":close_spawn,
-    }
+    },
+    red_spawn: {
+        "name":boss_spawns[0],
+        # changed to 1000.0 for Y 1000.0 for Z
+        # changed X to 3500 0 for Y 1000 for Z
+        "location":(3500.0,0.0,1000.0),
+        "myname":red_spawn,
+    },
 }
 OPTIONS=4
 BPCHAR=1
 katagawa = ("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
             "Oversphere_Katagawa",
-            {"spawn":close_spawn})
+            {"spawn":red_spawn})
 wotan = ("Wotan","/Game/PatchDLC/Raid1/Enemies/Behemoth/_Unique/RaidMiniBoss/_Design/Character/BPChar_BehemothRaid",
          "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
          "Behemoth_Raid",
+         {"spawn":close_spawn}) # was red_spawn
+omega = ("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Character/BPChar_Nekrobug_BetterTimes",
+         "/Game/Enemies/Nekrobug/_Shared/_Design/Balance/Table_Balance_Nekrobug_Unique",
+         "Nekrobug_BetterTimes",
          {"spawn":close_spawn})
 
 good_endbosses = [
     #("Graveward","/Game/Enemies/EdenBoss/_Shared/_Design/Character/BPChar_EdenBoss",
     # "/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1","EdenBoss",
     # {"spawn":far_spawn}),
-    #("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Character/BPChar_Nekrobug_BetterTimes",
-    # "/Game/Enemies/Nekrobug/_Shared/_Design/Balance/Table_Balance_Nekrobug_Unique",
-    # "Nekrobug_BetterTimes",
-    # {"spawn":close_spawn}),
     #("Fabrikator","/Game/PatchDLC/Dandelion/Enemies/Fabrikator/Basic/_Design/Character/BPChar_FabrikatorBasic",
     # "/Game/PatchDLC/Dandelion/Enemies/Fabrikator/_Shared/_Design/Balance/Table_Balance_Fabrikator",
     # "FabrikatorPT2",
     # {"spawn":close_spawn}),
-    #("Wotan","/Game/PatchDLC/Raid1/Enemies/Behemoth/_Unique/RaidMiniBoss/_Design/Character/BPChar_BehemothRaid",
-    #  "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
-    #  "Behemoth_Raid",
-    #  {"spawn":close_spawn}),
+    omega,
     wotan,
     katagawa,
 ]
@@ -1024,14 +1031,22 @@ def generate_spawn( spawn_entry ):
     (x,y,z) = spawn_entry["location"]
     path =  spawnpoint.split("'")[1]
     mod.comment(f"generate_spawn: {spawn_entry.get('myname','')} {spawnpoint} moved to ({x},{y},{z})")
-    mod.reg_hotfix(
+    for (obj,val) in [("RelativeLocation",f'(X={x},Y={y},Z={z})'),
+                    ('bFilterByTag','None'),
+                    ('SpawnAction','None'),
+                    ('FilterMatchType','None'),
+                    ('Tags','None')
+    ]:
+        mod.reg_hotfix(
             Mod.EARLYLEVEL, 'TechSlaughter_P',
             #f"{Tech_mission}.{wave}.SpawnerComponent",
             #f"/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Mission.TechSlaughter_Mission:PersistentLevel.{spawnpoint}.SpawnPointComponent",
             f"{path}.SpawnPointComponent",
-            "RelativeLocation",
-            f'(X={x},Y={y},Z={z})','',True)
+            #"RelativeLocation",
+            obj,
+            val,'',True)
 
+    
 def set_wave_spawns_to( wave, spawns ):
     ''' set the spawns for this `wave` to `spawns`
         `spawns` is a list of spawn name strings
@@ -1105,11 +1120,16 @@ def gen_endboss(boss=None,wave=None,wavecode=None,spawners=["Factory_SpawnFactor
 # generate safe spawns (remove balconies)    
 gen_safe_spawns()
 
+def force_wotan_drop():
+    # trying to spawn katagawa in round 1
+    b = katagawa
+    gen_endboss(boss=b,wave='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave1a_Trooper1',wavecode=111,spawners=["Factory_SpawnFactory_OakAI" for i in range (6)])
+    gen_endboss(boss=b,wave='/Game/Enemies/_Spawning/Maliwan/_Mixes/Zone_1/SpawnOptions_KatagawaBallAdds_MeleeMix',wavecode=111,spawners=["Factory_SpawnFactory_OakAI" for i in range (6)])
+
 # generate the mobs
 if args.json is None:
     default_mod(end_boss=True)
-    # trying to spawn katagawa in round 1
-    gen_endboss(boss=katagawa,wave='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave1a_Trooper1',wavecode=111,spawners=["Factory_SpawnFactory_OakAI"])
+    force_wotan_drop()
     # nothing:    
     # added for debug
     # limit_wave_to_n(missions[111],1) # only 1 the first wave
