@@ -75,20 +75,11 @@ for okey in ['Description','PreAcceptanceSummary','PostAcceptanceSummary']:
         mod.reg_hotfix(level, 'MatchAll', '/Game/Missions/Side/Slaughters/TechSlaughter/Mission_TechSlaughter1.Default__Mission_TechSlaughter1_C',f'{okey}.FormatText',story)
 
 
-# from gen_3000_Char_list import *
-# from gen_3000_helper_functions import *
 from decimal import Decimal
 # my imports
 import boss
 import mobnames
 
-#additional or multiply health/dmg scalling, false = (src_health|src_dmg) + (base_hs|base_ds), true = (src_health|src_dmg) * (base_hs|base_ds)
-health_dmg_multiply = False
-health_dmg_with_log = False
-#health scalling
-base_hs = 6
-#damage scalling
-base_ds = 0.8
 
 # what proportion of mobs to buff
 toughen_mobs = float(args.tough)
@@ -118,15 +109,6 @@ def rev(cnt, idx):
     else:
         return idx
 
-def enemy_type(etype):
-    return {
-        'Normal': "'/Game/GameData/ZoneMap/POI_Types/POI_CrewChallengeEnemy.POI_CrewChallengeEnemy'",
-        'None': "'/Game/GameData/ZoneMap/POI_Types/POI_Enemy.POI_Enemy'",
-        'VeryGood': "'/Game/GameData/ZoneMap/POI_Types/POI_CrewChallengeEnemy.POI_CrewChallengeEnemy'",
-        'Badass': "'/Game/GameData/ZoneMap/POI_Types/POI_CrewChallengeEnemy.POI_CrewChallengeEnemy'",
-        'SuperBadass': "'/Game/GameData/ZoneMap/POI_Types/POI_Boss.POI_Boss'",
-        'UltimateBadass': "'/Game/GameData/ZoneMap/POI_Types/POI_Boss.POI_Boss'",
-    }.get(etype,'!ERR_etype.{}'.format(etype))
 def enemy_icon(etype):
     return {
         'None': "POISprite'/Game/UI/_Shared/InWorldAndMapIcons/MinimapIcon_Enemy.MinimapIcon_Enemy'",
@@ -137,15 +119,6 @@ def enemy_icon(etype):
         'UltimateBadass': "POISprite'/Game/UI/_Shared/InWorldAndMapIcons/MinimapIcon_Boss.MinimapIcon_Boss'",
     }.get(etype,'!ERR_etype.{}'.format(etype))
     
-def enemy_legendaries(etype):
-    return {
-        'None': 1,
-        'Normal': 2,
-        'VeryGood': 3,
-        'Badass': 6,
-        'SuperBadass': 10,
-        'UltimateBadass': 15,
-    }.get(etype,'!ERR_etype.{}'.format(etype))
 
 def get_bpchar(s):
     return s.split('/')[-1]
@@ -154,12 +127,9 @@ def print_and_comment(s):
     print(s)
     mod.comment(s)
 
-healh_chance = 52
 chosen_mobs = set()
 def gen_mod(so, scale, my_list):
     c = len(my_list)
-    global healh_chance
-    healh_chance -= 1
     for idx, val in enumerate(my_list):
         if (isinstance(val[0],tuple) or isinstance(val[0],list)):
             # this means we're using (name,bpchar,balance,balancerow,extras)
@@ -206,24 +176,6 @@ def gen_mod(so, scale, my_list):
             mod.reg_hotfix(Mod.EARLYLEVEL, 'TechSlaughter_P', '{}:{}'.format(Mod.get_full(so),val[1]), 'TeamOverride', Mod.get_full_cond('/Game/Common/_Design/Teams/Team_Maliwan', 'Team'))
 
 
-# "BlueprintGeneratedClass'/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK.BPChar_LoaderEXP_JUNK_C'",
-            
-
-# gen_mod('/Game/Enemies/_Spawning/Maliwan/_Mixes/Zone_1/SpawnOptions_KatagawaBallAdds_MeleeMix',
-#         size,[
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI"), # ??
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI_1"),
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI_2"),
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI_3"),
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI_4"),
-#             ("/Game/PatchDLC/Dandelion/Enemies/Loader/JUNK_Loaders/_Design/Character/BPChar_LoaderEXP_JUNK",
-#              "Factory_SpawnFactory_OakAI_5"),
-#         ])
 
 _replace_enemy_uniq = set()
 def replace_enemy(l):
@@ -763,15 +715,6 @@ balconey_spawns = [
     "{}'{}.{}_49'".format(SP,Tech_mission,SP),#LBalcon Left
 ]
 
-c_balconey_spawns = [
-    "{}_C'{}.{}_12'".format(SP,Tech_mission,SP), # balconey?
-    "{}_C'{}.{}_15'".format(SP,Tech_mission,SP), # balconey?
-    "{}_C'{}.{}_39'".format(SP,Tech_mission,SP), # balconey?
-    #LEFT
-    "{}_C'{}.{}_41'".format(SP,Tech_mission,SP),#LBalcon Right
-    "{}_C'{}.{}_20'".format(SP,Tech_mission,SP),#LBalcon Center
-    "{}_C'{}.{}_49'".format(SP,Tech_mission,SP),#LBalcon Left
-]
 
 
 boss_spawns = [
@@ -990,7 +933,7 @@ good_endbosses = [
     # graveward,
     omega,
     wotan,
-    katagawa,
+    # katagawa,
 ]
 
 def limit_wave_to_n(wave,n):
@@ -1138,7 +1081,7 @@ def force_boss_drop(b=graveward):
 # generate the mobs
 if args.json is None:
     default_mod(end_boss=True)
-    force_boss_drop()
+    # force_boss_drop()
     # nothing:    
     # added for debug
     # limit_wave_to_n(missions[111],1) # only 1 the first wave
