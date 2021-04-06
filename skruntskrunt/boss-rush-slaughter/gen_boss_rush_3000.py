@@ -192,7 +192,7 @@ def gen_mod(so, scale, my_list):
                 f'(X={scale * float(extend[0])},Y={scale * float(extend[1])},Z={scale * float(extend[2])})')
             mod.reg_hotfix(Mod.LEVEL, 'TechSlaughter_P', Mod.get_full(so),
                 'Options.Options[{}].Factory.Object..SpawnOrigin'.format(rev(c,idx)),
-                f'(X={0},Y={0},Z={0})')# what if we change to X to 0 from 1500
+                f'(X={1500},Y={0},Z={0})')# what if we change to X to 0 from 1500
             mod.reg_hotfix(Mod.LEVEL, 'TechSlaughter_P', Mod.get_full(so),
                 'Options.Options[{}].Factory.Object..CollisionHandling'.format(rev(c,idx)),
                 'AlwaysSpawn')
@@ -949,14 +949,22 @@ boss_spawns = {
 }
 OPTIONS=4
 BPCHAR=1
+katagawa = ("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
+            "Oversphere_Katagawa",
+            {"spawn":close_spawn})
+wotan = ("Wotan","/Game/PatchDLC/Raid1/Enemies/Behemoth/_Unique/RaidMiniBoss/_Design/Character/BPChar_BehemothRaid",
+         "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
+         "Behemoth_Raid",
+         {"spawn":close_spawn})
+
 good_endbosses = [
     #("Graveward","/Game/Enemies/EdenBoss/_Shared/_Design/Character/BPChar_EdenBoss",
     # "/Game/Enemies/EdenBoss/_Shared/_Design/Balance/Table_Balance_EdenBoss_PT1","EdenBoss",
     # {"spawn":far_spawn}),
-    ("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Character/BPChar_Nekrobug_BetterTimes",
-     "/Game/Enemies/Nekrobug/_Shared/_Design/Balance/Table_Balance_Nekrobug_Unique",
-     "Nekrobug_BetterTimes",
-     {"spawn":close_spawn}),
+    #("OmegaMantikore","/Game/Enemies/Nekrobug/_Unique/BetterTimes/_Design/Character/BPChar_Nekrobug_BetterTimes",
+    # "/Game/Enemies/Nekrobug/_Shared/_Design/Balance/Table_Balance_Nekrobug_Unique",
+    # "Nekrobug_BetterTimes",
+    # {"spawn":close_spawn}),
     #("Fabrikator","/Game/PatchDLC/Dandelion/Enemies/Fabrikator/Basic/_Design/Character/BPChar_FabrikatorBasic",
     # "/Game/PatchDLC/Dandelion/Enemies/Fabrikator/_Shared/_Design/Balance/Table_Balance_Fabrikator",
     # "FabrikatorPT2",
@@ -965,9 +973,8 @@ good_endbosses = [
     #  "/Game/PatchDLC/Raid1/Enemies/Behemoth/_Shared/_Design/Balance/Table_Balance_Behemoth",
     #  "Behemoth_Raid",
     #  {"spawn":close_spawn}),
-    #("Katagawa Ball","/Game/Enemies/Oversphere/_Unique/KatagawaSphere/_Design/Character/BPChar_Oversphere_KatagawaSphere","/Game/Enemies/Oversphere/_Shared/_Design/Balance/Table_Balance_Oversphere_Unique",
-    # "Oversphere_Katagawa",
-    # {"spawn":close_spawn}),
+    wotan,
+    katagawa,
 ]
 
 def limit_wave_to_n(wave,n):
@@ -986,6 +993,21 @@ def limit_wave_to_n(wave,n):
                     path,   
                     obj,
                     1,'',True)
+        # we are trying to remove the initializer
+        #      "NumActorsParam" : {
+        # "AttributeInitializationData" : {
+        #    "AttributeInitializer" : [
+        #       "PCF_ScaleBy25PercentPerAdditionalPlayer_C",
+        #       "/Game/GameData/Balance/PlayerCountFormulas/PCF_ScaleBy25PercentPerAdditionalPlayer"
+        #    ],
+        #    "BaseValueConstant" : 6
+        # }
+        mod.reg_hotfix(
+                    Mod.EARLYLEVEL, 
+                    'TechSlaughter_P',
+                    path,   
+                    obj.replace("BaseValueConstant","AttributeInitializer"),
+                    'None','',True)
 
 def generate_spawn( spawn_entry ):
     ''' generate a spawn by moving an existing one 
@@ -1052,6 +1074,9 @@ def gen_endboss(boss=None,wave=None,wavecode=None,spawners=["Factory_SpawnFactor
             my_boss = _endbosses.pop()
         else:
             my_boss = random.choice(good_endbosses)
+    elif (isinstance(boss,tuple) or isinstance(boss,list)):
+        # if the boss is a boss tuple just roll with it
+        my_boss = boss
     else:
         candidate_boss = [x for x in good_endbosses if x[0] == boss or x[1] == boss]
         if len(candidate_boss) <= 1:
@@ -1083,6 +1108,8 @@ gen_safe_spawns()
 # generate the mobs
 if args.json is None:
     default_mod(end_boss=True)
+    # trying to spawn katagawa in round 1
+    gen_endboss(boss=katagawa,wave='/Game/Enemies/_Spawning/Slaughters/TechSlaughter/Round1/SpawnOptions_TechSlaughter_Round1Wave1a_Trooper1',wavecode=111,spawners=["Factory_SpawnFactory_OakAI"])
     # nothing:    
     # added for debug
     # limit_wave_to_n(missions[111],1) # only 1 the first wave
